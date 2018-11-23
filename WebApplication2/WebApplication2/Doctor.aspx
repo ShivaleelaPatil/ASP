@@ -23,6 +23,7 @@
         <asp:RadioButton ID="RadioButton2" runat="server" OnCheckedChanged="RadioButton2_CheckedChanged" Text="Female" />
     </p>
     <p>
+        Click button:<asp:Button ID="Button2" runat="server" Text="Button" />
     </p>
     <p>
     </p>

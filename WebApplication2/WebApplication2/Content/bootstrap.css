@@ -113,8 +113,7 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0;
-  font: inherit;
+  margin: 0 0 0 219px;
   color: inherit;
 }
 button {
@@ -4970,6 +4969,7 @@ a.badge:focus {
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
+    width: 1167px;
 }
 .jumbotron > hr {
   border-top-color: #d5d5d5;
