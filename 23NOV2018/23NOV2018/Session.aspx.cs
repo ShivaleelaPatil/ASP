@@ -42,9 +42,14 @@ namespace _23NOV2018
             //TextBox1.Text = Convert.ToString(Cookies["Patime"]);
             //TextBox3.Text = Convert.ToString(Cookies[""]);
             //TextBox2.Text = Convert.ToString(Session["Age"]);
-            TextBox4.Text = Request.Cookies["Doctorname"].Value;
-            TextBox5.Text = Request.Cookies["Specialization"].Value;
-            TextBox6.Text = Request.Cookies["Age"].Value;
+            //TextBox4.Text = Request.Cookies["Doctorname"].Value;
+            //TextBox5.Text = Request.Cookies["Specialization"].Value;
+            //TextBox6.Text = Request.Cookies["Age"].Value;
+            Session["Doctorname"] = TextBox4.Text;
+            Session["Specialization"] = TextBox5.Text;
+            Session["Age"] = TextBox6.Text;
+
+
 
 
 
