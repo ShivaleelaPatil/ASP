@@ -61,6 +61,10 @@
                 <br />
                 <br />
                 <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Insert" />
+                <br />
+                <br />
+                <br />
+                <asp:Button ID="Delete" runat="server" OnClick="Delete_Click" Text="DeleteData" />
             </td>
         </tr>
     </table>

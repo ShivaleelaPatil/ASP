@@ -51,5 +51,10 @@ namespace UsingtoredProcedure
             product.InsertData();
 
         }
+
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            product.Delete();
+        }
     }
 }

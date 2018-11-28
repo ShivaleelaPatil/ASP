@@ -120,6 +120,30 @@ namespace UsingtoredProcedure.ProDetails
             return true;
         }
 
+        public bool Delete()
+
+        {
+
+            DataSet ds;
+            SqlCommandBuilder cmdBuilder;
+
+            using (SqlConnection conn = new SqlConnection("Data Source=localhost;Initial Catalog=WebAuthentication1;Integrated Security=True;Connect Timeout=15;Encrypt=False;Packet Size=4096"))
+            {
+                SqlDataAdapter adapter = new SqlDataAdapter("select * from ProductInformation", conn);
+                cmdBuilder = new SqlCommandBuilder(adapter);
+                ds = new DataSet();
+                adapter.Fill(ds, "ProductInformation");
+              
+                    ds.Tables["ProductInformation"].Rows[3].Delete();
+               
+            }
+            return true;
+        }
+
+
+
+
+
     }
 }
  
