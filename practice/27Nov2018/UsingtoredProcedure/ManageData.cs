@@ -40,40 +40,19 @@ namespace UsingtoredProcedure
     public class SQLManager
 
     {
-
-        public static string ConnectionString { get; set; }
-
-
-
-        public SQLManager()
-
+     public static string ConnectionString { get; set; }
+     public SQLManager()
         { }
-
         static SQLManager()
-
         {
-
             ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-
         }
-
-
-
         public bool UpdateRecord(string Updating, List<ProcParameters> ProcParams)
-
-
         {
-
-            bool isSucess = true;
-
-
-
+           bool isSucess = true;
             try
-
-            {
-
+             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
-
                 {
 
                     conn.Open();
@@ -82,7 +61,7 @@ namespace UsingtoredProcedure
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                   
+
 
 
                     foreach (ProcParameters param in ProcParams)
@@ -126,7 +105,6 @@ namespace UsingtoredProcedure
 
         {
 
-            // Improvise this to manage exceptions
 
             DataSet ds = new DataSet();
 
@@ -150,9 +128,6 @@ namespace UsingtoredProcedure
         public DataSet GetDataSet(string ProcName, bool isProc)
 
         {
-
-            // Improvise this to manage exceptions
-
             DataSet ds = new DataSet();
 
             using (SqlConnection conn = new SqlConnection(ConnectionString))

@@ -39,9 +39,7 @@ namespace UsingtoredProcedure
             if (!this.IsPostBack)
 
             {
-
-                BindGrid();
-
+              BindGrid();
             }
         }
         public void BindGrid()
@@ -57,38 +55,19 @@ namespace UsingtoredProcedure
         {
 
             GridView1.EditIndex = e.NewEditIndex;
-
             BindGrid();
 
         }
-
-
-
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
 
         {
 
-            Product product = new Products();
-          GridViewRow row = GridView1.Rows[e.RowIndex];
-
-
+            Product product = new Product();
+            GridViewRow row = GridView1.Rows[e.RowIndex];
             product.Id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Values[0]);
-
-
-
             product.Name = (row.FindControl("TextBox1") as TextBox).Text;
-
-
-
-
-
-
             product.UpdateProduct(product);
-
-
-
             GridView1.EditIndex = -1;
-
             BindGrid();
 
         }
